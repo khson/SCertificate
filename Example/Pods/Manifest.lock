@@ -1,0 +1,16 @@
+PODS:
+  - SCertificate (0.1.0)
+
+DEPENDENCIES:
+  - SCertificate (from `../`)
+
+EXTERNAL SOURCES:
+  SCertificate:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SCertificate: 8cf7ebcd08d3acacf54a9d20e724687d36619c00
+
+PODFILE CHECKSUM: f3bcd750f75f0ef4b1b40c234410f1cad334a708
+
+COCOAPODS: 1.7.5

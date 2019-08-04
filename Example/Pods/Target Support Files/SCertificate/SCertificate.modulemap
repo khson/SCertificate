@@ -1,0 +1,6 @@
+framework module SCertificate {
+  umbrella header "SCertificate-umbrella.h"
+
+  export *
+  module * { export * }
+}
