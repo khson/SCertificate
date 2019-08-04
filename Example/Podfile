@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SCertificate_Example' do
+  pod 'SCertificate', :path => '../'
+
+  target 'SCertificate_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
