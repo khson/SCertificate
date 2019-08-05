@@ -10,14 +10,13 @@
 		0A564027A58CB0C3485DD6B917EF2837 /* SCertificate-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FC850CCE8011657B231F4C8BFCC35F1 /* SCertificate-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1466326C514C343D2C42E394330A0645 /* Pods-SCertificate_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F117CCC91E97841CD0CAD57C6978ECB7 /* Pods-SCertificate_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		154D76F95C5E7968C401A4E6686FAFE4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		754DA95122F7F41100FF7EBB /* Certificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754DA95022F7F41100FF7EBB /* Certificate.swift */; };
-		754DA95322F81CD800FF7EBB /* NPKI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754DA95222F81CD800FF7EBB /* NPKI.swift */; };
 		83D69002C0C12B747098E38E450C97C7 /* Pods-SCertificate_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD3ABD8E373495C9BC458F172AE80BA /* Pods-SCertificate_Example-dummy.m */; };
 		94FB45ADE7328C4C2EE82D594A68F8E3 /* SCertificate-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0771869094FBB4BE1D5026BB0B2AF /* SCertificate-dummy.m */; };
 		AF055386666DCF18F3869261B9E8D9F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		DB651CE9ED572311580F7FBF1EB3B579 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		E2258DD489740E6538D10DA1C276B02F /* Pods-SCertificate_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AE79EAFA54A465DB881C104B5F491BF1 /* Pods-SCertificate_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EEE5F84832371C4E14EAE4CEC0A62AE6 /* Pods-SCertificate_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB827EB4CBD0DE4D78DDE3567B18FBA /* Pods-SCertificate_Tests-dummy.m */; };
+		FC0CE16A6D44138078EB942C6BF76EF5 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344C225F7FA7E08B94B082529568DDB7 /* ReplaceMe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,27 +46,26 @@
 		21E0771869094FBB4BE1D5026BB0B2AF /* SCertificate-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SCertificate-dummy.m"; sourceTree = "<group>"; };
 		291773763B4893E9AD0E9E35094E5E57 /* SCertificate-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCertificate-prefix.pch"; sourceTree = "<group>"; };
 		2AE9B8A23FF4BF03CCADBB1E06409F37 /* Pods-SCertificate_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SCertificate_Tests-Info.plist"; sourceTree = "<group>"; };
-		2EF8BFCAC01070EA7066D6741B4F7946 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2EF8BFCAC01070EA7066D6741B4F7946 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		31649DCF92A082FB6AB32C3B29A6EAB9 /* SCertificate.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCertificate.xcconfig; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		344C225F7FA7E08B94B082529568DDB7 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = SCertificate/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		3AD3ABD8E373495C9BC458F172AE80BA /* Pods-SCertificate_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SCertificate_Example-dummy.m"; sourceTree = "<group>"; };
-		4789CE2142A30A1E8F280FAF0E60E2F0 /* Pods_SCertificate_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SCertificate_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4789CE2142A30A1E8F280FAF0E60E2F0 /* Pods_SCertificate_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SCertificate_Tests.framework; path = "Pods-SCertificate_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A5F2B9D70CA9833F90B94AD9C4B3DAF /* Pods-SCertificate_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SCertificate_Tests.modulemap"; sourceTree = "<group>"; };
 		4F37569ADCA75E0D54E827084D85F8E5 /* Pods-SCertificate_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SCertificate_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		62485F4E8BBA9C73D98233ABF145BFF9 /* SCertificate-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SCertificate-Info.plist"; sourceTree = "<group>"; };
 		7187284E114D1C1A9FF7BA70CFA81833 /* Pods-SCertificate_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SCertificate_Example-frameworks.sh"; sourceTree = "<group>"; };
-		754DA95022F7F41100FF7EBB /* Certificate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Certificate.swift; path = SCertificate/Classes/Certificate.swift; sourceTree = "<group>"; };
-		754DA95222F81CD800FF7EBB /* NPKI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NPKI.swift; path = SCertificate/Classes/NPKI.swift; sourceTree = "<group>"; };
 		845CACD3B51C2FBAC577A77090BA73D0 /* Pods-SCertificate_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SCertificate_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		8AB827EB4CBD0DE4D78DDE3567B18FBA /* Pods-SCertificate_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SCertificate_Tests-dummy.m"; sourceTree = "<group>"; };
-		8BBC8063E43CAB5B5981DEC83F3A6B1E /* Pods_SCertificate_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SCertificate_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A27A878AF5D39D3B9429033B161A0EBA /* SCertificate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SCertificate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BBC8063E43CAB5B5981DEC83F3A6B1E /* Pods_SCertificate_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SCertificate_Example.framework; path = "Pods-SCertificate_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A27A878AF5D39D3B9429033B161A0EBA /* SCertificate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SCertificate.framework; path = SCertificate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE79EAFA54A465DB881C104B5F491BF1 /* Pods-SCertificate_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SCertificate_Example-umbrella.h"; sourceTree = "<group>"; };
 		B563B6499E4DD5246DE874BDEC22E9DE /* Pods-SCertificate_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SCertificate_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		BB1880812D6A5E06B6ECE992475BCBA7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		BB1880812D6A5E06B6ECE992475BCBA7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		C9B8A582639C56B1F910FD2A86F0A84A /* Pods-SCertificate_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SCertificate_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D892C7FC0D95355384262152ED3B1CA5 /* SCertificate.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SCertificate.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D892C7FC0D95355384262152ED3B1CA5 /* SCertificate.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SCertificate.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E1FE1970BE6760F51EF3DDBDA675909D /* Pods-SCertificate_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SCertificate_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		EB8F3BDD019661D68E4501C425C6819D /* Pods-SCertificate_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SCertificate_Example-Info.plist"; sourceTree = "<group>"; };
 		F117CCC91E97841CD0CAD57C6978ECB7 /* Pods-SCertificate_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SCertificate_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -163,10 +161,9 @@
 		969A464AB89F86C449942484BC829228 /* SCertificate */ = {
 			isa = PBXGroup;
 			children = (
+				344C225F7FA7E08B94B082529568DDB7 /* ReplaceMe.swift */,
 				83526A61B891AEE3BD7EFB60EE6D88AD /* Pod */,
 				5DBF3FA40ACB1A4AC6FEFBCEB3D54ED7 /* Support Files */,
-				754DA95022F7F41100FF7EBB /* Certificate.swift */,
-				754DA95222F81CD800FF7EBB /* NPKI.swift */,
 			);
 			name = SCertificate;
 			path = ../..;
@@ -375,8 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				754DA95122F7F41100FF7EBB /* Certificate.swift in Sources */,
-				754DA95322F81CD800FF7EBB /* NPKI.swift in Sources */,
+				FC0CE16A6D44138078EB942C6BF76EF5 /* ReplaceMe.swift in Sources */,
 				94FB45ADE7328C4C2EE82D594A68F8E3 /* SCertificate-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -626,7 +622,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
