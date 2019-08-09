@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let npki = Certificate.NPKI.init()
+        let npki = NPKI.init()
         npki.cleanUp()
         let certificateList = npki.getList()
         print(certificateList)
@@ -27,4 +27,3 @@ class ViewController: UIViewController {
     }
 
 }
-
