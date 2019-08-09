@@ -2,7 +2,7 @@
   "name": "SCertificate",
   "version": "0.1.0",
   "summary": "A short description of SCertificate.",
-  "description": "TODO: Add long description of the pod here.",
+  "description": "Certificate Utility",
   "homepage": "https://github.com/khson/SCertificate",
   "license": {
     "type": "MIT",

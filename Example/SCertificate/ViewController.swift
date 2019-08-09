@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import SCertificate
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let npki = NPKI.init()
+        npki.cleanUp()
+        let certificateList = npki.getList()
+        print(certificateList)
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,4 +27,3 @@ class ViewController: UIViewController {
     }
 
 }
-
