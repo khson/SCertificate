@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class X509Certificate: CustomStringConvertible, Certificate {
+public class X509Certificate: CustomStringConvertible, SCertificate {
     private let asn1: [ASN1Object]
     private let block1: ASN1Object
     

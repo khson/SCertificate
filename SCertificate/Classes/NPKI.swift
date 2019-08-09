@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct NPKI: Certificate {
+public struct NPKI: SCertificate {
     public enum CertificateType {
         case signCertDer
         case signPriKey

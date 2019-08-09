@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class ASN1Identifier: CustomStringConvertible, Certificate {
+public class ASN1Identifier: CustomStringConvertible, SCertificate {
     
     public enum Class : UInt8 {
         case universal = 0x00

@@ -14,7 +14,7 @@
 		753606E222F97E20007CC3A1 /* ASN1DERDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753606E122F97E20007CC3A1 /* ASN1DERDecoder.swift */; };
 		753606E422F97E4C007CC3A1 /* ASN1Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753606E322F97E4C007CC3A1 /* ASN1Identifier.swift */; };
 		753606E622F97E6E007CC3A1 /* ASN1Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753606E522F97E6E007CC3A1 /* ASN1Object.swift */; };
-		754DA95122F7F41100FF7EBB /* Certificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754DA95022F7F41100FF7EBB /* Certificate.swift */; };
+		754DA95122F7F41100FF7EBB /* SCertificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754DA95022F7F41100FF7EBB /* SCertificate.swift */; };
 		754DA95322F81CD800FF7EBB /* NPKI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754DA95222F81CD800FF7EBB /* NPKI.swift */; };
 		83D69002C0C12B747098E38E450C97C7 /* Pods-SCertificate_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD3ABD8E373495C9BC458F172AE80BA /* Pods-SCertificate_Example-dummy.m */; };
 		94FB45ADE7328C4C2EE82D594A68F8E3 /* SCertificate-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0771869094FBB4BE1D5026BB0B2AF /* SCertificate-dummy.m */; };
@@ -64,7 +64,7 @@
 		753606E122F97E20007CC3A1 /* ASN1DERDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ASN1DERDecoder.swift; path = SCertificate/Classes/ASN1DERDecoder.swift; sourceTree = "<group>"; };
 		753606E322F97E4C007CC3A1 /* ASN1Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ASN1Identifier.swift; path = SCertificate/Classes/ASN1Identifier.swift; sourceTree = "<group>"; };
 		753606E522F97E6E007CC3A1 /* ASN1Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ASN1Object.swift; path = SCertificate/Classes/ASN1Object.swift; sourceTree = "<group>"; };
-		754DA95022F7F41100FF7EBB /* Certificate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Certificate.swift; path = SCertificate/Classes/Certificate.swift; sourceTree = "<group>"; };
+		754DA95022F7F41100FF7EBB /* SCertificate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SCertificate.swift; path = SCertificate/Classes/SCertificate.swift; sourceTree = "<group>"; };
 		754DA95222F81CD800FF7EBB /* NPKI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NPKI.swift; path = SCertificate/Classes/NPKI.swift; sourceTree = "<group>"; };
 		845CACD3B51C2FBAC577A77090BA73D0 /* Pods-SCertificate_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SCertificate_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		8AB827EB4CBD0DE4D78DDE3567B18FBA /* Pods-SCertificate_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SCertificate_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -173,7 +173,7 @@
 			children = (
 				83526A61B891AEE3BD7EFB60EE6D88AD /* Pod */,
 				5DBF3FA40ACB1A4AC6FEFBCEB3D54ED7 /* Support Files */,
-				754DA95022F7F41100FF7EBB /* Certificate.swift */,
+				754DA95022F7F41100FF7EBB /* SCertificate.swift */,
 				754DA95222F81CD800FF7EBB /* NPKI.swift */,
 				753606DF22F97DBB007CC3A1 /* X509Certificate.swift */,
 				753606E122F97E20007CC3A1 /* ASN1DERDecoder.swift */,
@@ -392,7 +392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				754DA95122F7F41100FF7EBB /* Certificate.swift in Sources */,
+				754DA95122F7F41100FF7EBB /* SCertificate.swift in Sources */,
 				753606E422F97E4C007CC3A1 /* ASN1Identifier.swift in Sources */,
 				753606E222F97E20007CC3A1 /* ASN1DERDecoder.swift in Sources */,
 				753606E022F97DBB007CC3A1 /* X509Certificate.swift in Sources */,

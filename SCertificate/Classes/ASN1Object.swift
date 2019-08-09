@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class ASN1Object : CustomStringConvertible, Certificate {
+public class ASN1Object : CustomStringConvertible, SCertificate {
     /// This property contains the DER encoded object
     public var rawValue: Data?
     

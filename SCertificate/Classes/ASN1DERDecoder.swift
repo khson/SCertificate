@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class ASN1DERDecoder: Certificate {
+public class ASN1DERDecoder: SCertificate {
     
     public static func decode(data: Data) throws -> [ASN1Object] {
         var iterator = data.makeIterator()
