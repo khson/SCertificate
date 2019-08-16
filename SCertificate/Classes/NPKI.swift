@@ -20,27 +20,13 @@ public struct NPKI: SCertificate {
         }
     }
     static let Root = "NPKI"
-    static let certFile = "signCert.der"
-    static let keyFile = "signPri.key"
-    static let errorCertFile = "SignCert.der"
-    static let errorKeyFile = "SignPri.key"
+    private static let certFile = "signCert.der"
+    private static let keyFile = "signPri.key"
+    private static let errorCertFile = "SignCert.der"
+    private static let errorKeyFile = "SignPri.key"
+    let institutions = ["CrossCert", "KICA", "KISA", "NCASign", "SignKorea", "TradeSign", "yessign"]
+    
     let fileManager = FileManager.default
-    let institutions = [
-        "CrossCert/USER",
-        "CrossCert/User",
-        "KICA/USER",
-        "KICA/User",
-        "KISA/USER",
-        "KISA/User",
-        "NCASign/USER",
-        "NCASign/User",
-        "SignKorea/USER",
-        "SignKorea/User",
-        "TradeSign/USER",
-        "TradeSign/User",
-        "yessign/USER",
-        "yessign/User"
-    ]
     
     public init() {
         cleanUp()
@@ -48,30 +34,9 @@ public struct NPKI: SCertificate {
 }
 
 extension NPKI {
-    private func getRootPath() -> URL {
-        // swiftlint:disable:next force_try
-        let documentDir = try! fileManager.url(for: .documentDirectory,
-                                               in: .userDomainMask,
-                                               appropriateFor: nil,
-                                               create: true)
-        return documentDir.appendingPathComponent(NPKI.Root, isDirectory: true)
-    }
-    
-    private func getUrl(path: String) -> URL {
-        // swiftlint:disable:next force_try
-        let documentDir = try! fileManager.url(for: .documentDirectory,
-                                               in: .userDomainMask,
-                                               appropriateFor: nil,
-                                               create: true)
-        return documentDir.appendingPathComponent(path, isDirectory: true)
-    }
-}
-
-extension NPKI {
-    public func cleanUp() {
+    public mutating func cleanUp() {
         let rootPath = getRootPath()
-        
-        institutions.forEach { cert in
+        institutionsPath().forEach { cert in
             let certPath = rootPath.appendingPathComponent(cert, isDirectory: true)
             if fileManager.fileExists(atPath: certPath.path) {
                 do {
@@ -103,11 +68,11 @@ extension NPKI {
 }
 
 extension NPKI {
-    public func getList() -> [String] {
+    public mutating func getList() -> [String] {
         var npkiList = [String]()
         let rootPath = getRootPath()
         
-        institutions.forEach { cert in
+        institutionsPath().forEach { cert in
             let certPath = rootPath.appendingPathComponent(cert, isDirectory: true)
             if fileManager.fileExists(atPath: certPath.path) {
                 do {
