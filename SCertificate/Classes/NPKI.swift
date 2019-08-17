@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct NPKI: SCertificate {
+public class NPKI: SCertificate {
     public enum CertificateType {
         case signCertDer
         case signPriKey
@@ -34,7 +34,7 @@ public struct NPKI: SCertificate {
 }
 
 extension NPKI {
-    public mutating func cleanUp() {
+    public func cleanUp() {
         let rootPath = getRootPath()
         institutionsPath().forEach { cert in
             let certPath = rootPath.appendingPathComponent(cert, isDirectory: true)
@@ -68,7 +68,7 @@ extension NPKI {
 }
 
 extension NPKI {
-    public mutating func getList() -> [String] {
+    public func getList() -> [String] {
         var npkiList = [String]()
         let rootPath = getRootPath()
         
