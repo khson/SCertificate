@@ -22,7 +22,7 @@ pod 'SCertificate'
 
 ## Author
 
-khson, email.khson@gmail.com
+khson, khson.dev@gmail.com
 
 ## License
 

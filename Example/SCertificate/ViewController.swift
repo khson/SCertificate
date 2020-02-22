@@ -18,6 +18,10 @@ class ViewController: UIViewController {
         let npki = NPKI.init()
         let certificateList = npki.getList()
         print(certificateList)
+        
+        certificateList.forEach()
+        let cert = npki.getCertFile(type: .signCertDer, path: certificateList[0])
+        let pri = npki.getCertFile(type: .signPriKey, path: certificateList[0])
     }
 
     override func didReceiveMemoryWarning() {
