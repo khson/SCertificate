@@ -11,7 +11,7 @@ extension NPKI {
     func getRootPath() -> URL {
         #if os(OSX)
         let libraryDir = try! fileManager.url(for: .libraryDirectory,
-                                              in: .userDomainMask,
+                                              in: .localDomainMask,
                                               appropriateFor: nil,
                                               create: true)
         return libraryDir.appendingPathComponent(NPKI.Preferences + "/" + NPKI.Root, isDirectory: true)
@@ -26,12 +26,20 @@ extension NPKI {
     }
     
     func getUrl(path: String) -> URL {
+        #if os(OSX)
+        let libraryDir = try! fileManager.url(for: .libraryDirectory,
+                                              in: .localDomainMask,
+                                              appropriateFor: nil,
+                                              create: true)
+        return libraryDir.appendPathComponent(path, isDirectory: true)
+        #else
         // swiftlint:disable:next force_try
         let documentDir = try! fileManager.url(for: .documentDirectory,
                                                in: .userDomainMask,
                                                appropriateFor: nil,
                                                create: true)
         return documentDir.appendingPathComponent(path, isDirectory: true)
+        #endif
     }
     
     func institutionsPath() -> [String] {
