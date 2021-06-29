@@ -31,7 +31,7 @@ extension NPKI {
                                               in: .localDomainMask,
                                               appropriateFor: nil,
                                               create: true)
-        return libraryDir.appendPathComponent(path, isDirectory: true)
+        return libraryDir.appendingPathComponent(path, isDirectory: true)
         #else
         // swiftlint:disable:next force_try
         let documentDir = try! fileManager.url(for: .documentDirectory,
