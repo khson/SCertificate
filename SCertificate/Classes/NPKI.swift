@@ -19,6 +19,7 @@ public class NPKI: SCertificate {
             }
         }
     }
+    static let Preferences = "Preferences"
     static let Root = "NPKI"
     private static let certFile = "signCert.der"
     private static let keyFile = "signPri.key"

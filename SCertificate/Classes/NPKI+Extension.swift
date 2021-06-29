@@ -9,12 +9,20 @@ import Foundation
 
 extension NPKI {
     func getRootPath() -> URL {
+        #if os(OSX)
+        let libraryDir = try! fileManager.url(for: .libraryDirectory,
+                                              in: .userDomainMask,
+                                              appropriateFor: nil,
+                                              create: true)
+        return libraryDir.appendingPathComponent(NPKI.Preferences + "/" + NPKI.Root, isDirectory: true)
+        #else
         // swiftlint:disable:next force_try
         let documentDir = try! fileManager.url(for: .documentDirectory,
                                                in: .userDomainMask,
                                                appropriateFor: nil,
                                                create: true)
         return documentDir.appendingPathComponent(NPKI.Root, isDirectory: true)
+        #endif
     }
     
     func getUrl(path: String) -> URL {
