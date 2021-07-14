@@ -7,6 +7,7 @@
 
 import Foundation
 
+@objcMembers
 public class NPKI: SCertificate {
     public enum CertificateType {
         case signCertDer
@@ -35,6 +36,7 @@ public class NPKI: SCertificate {
 }
 
 extension NPKI {
+    @objc
     public func cleanUp() {
         let rootPath = getRootPath()
         institutionsPath().forEach { cert in
@@ -69,6 +71,7 @@ extension NPKI {
 }
 
 extension NPKI {
+    @objc
     public func getList() -> [String] {
         var npkiList = [String]()
         let rootPath = getRootPath()
