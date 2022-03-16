@@ -17,11 +17,19 @@ class ViewController: UIViewController {
         
         let npki = NPKI.init()
         let certificateList = npki.getList()
-        print(certificateList)
-        
-        certificateList.forEach()
-        let cert = npki.getCertFile(type: .signCertDer, path: certificateList[0])
-        let pri = npki.getCertFile(type: .signPriKey, path: certificateList[0])
+        certificateList.forEach() { certificate in
+            let cert = npki.getCertFile(type: .signCertDer, path: certificate)
+            //let pri = npki.getCertFile(type: .signPriKey, path: certificate)
+            if let cert = cert {
+                let info = getInfo(cert)
+                print(info?.userName)
+            }
+        }
+    }
+    
+    private func getInfo(_ cert: Data) -> Certificate.Info? {
+        let certificate = Certificate.init(cert: cert)
+        return certificate.getInfo()
     }
 
     override func didReceiveMemoryWarning() {
