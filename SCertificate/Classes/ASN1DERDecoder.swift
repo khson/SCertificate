@@ -13,22 +13,15 @@ public class ASN1DERDecoder: SCertificate {
         var iterator = data.makeIterator()
         return try parse(iterator: &iterator)
     }
-    
-    
+        
     private static func parse(iterator: inout Data.Iterator) throws -> [ASN1Object]  {
-        
         var result: [ASN1Object] = []
-        
         while let nextValue = iterator.next() {
-            
             let asn1obj = ASN1Object()
             asn1obj.identifier = ASN1Identifier(rawValue: nextValue)
             
-            
             if asn1obj.identifier!.isConstructed() {
-                
                 let contentData = try loadSubContent(iterator: &iterator)
-                
                 if contentData.isEmpty {
                     asn1obj.sub = try parse(iterator: &iterator)
                 }
@@ -38,7 +31,6 @@ public class ASN1DERDecoder: SCertificate {
                 }
                 
                 asn1obj.value = nil
-                
                 asn1obj.rawValue = Data(contentData)
                 
                 for item in asn1obj.sub! {
@@ -48,42 +40,26 @@ public class ASN1DERDecoder: SCertificate {
             else {
                 
                 if asn1obj.identifier!.typeClass() == .universal {
-                    
                     var contentData = try loadSubContent(iterator: &iterator)
-                    
                     asn1obj.rawValue = Data(contentData)
                     
-                    
-                    
                     // decode the content data with come more convenient format
-                    
                     switch asn1obj.identifier!.tagNumber() {
-                        
                     case .endOfContent:
                         return result
-                        
                     case .boolean:
                         if let value = contentData.first {
                             asn1obj.value = value > 0 ? true : false
-                            
                         }
-                        
-                        
                     case .integer:
                         while contentData.first == 0 {
                             contentData.remove(at: 0) // remove not significant digit
                         }
                         asn1obj.value = contentData
-                        
-                        
                     case .null:
                         asn1obj.value = nil
-                        
-                        
                     case .objectIdentifier:
                         asn1obj.value = decodeOid(contentData: &contentData)
-                        
-                        
                     case .utf8String,
                          .printableString,
                          .numericString,
@@ -91,37 +67,23 @@ public class ASN1DERDecoder: SCertificate {
                          .universalString,
                          .characterString,
                          .t61String:
-                        
                         asn1obj.value = String(data: contentData, encoding: .utf8)
-                        
-                        
                     case .bmpString:
                         asn1obj.value = String(data: contentData, encoding: .unicode)
-                        
-                        
                     case .visibleString,
                          .ia5String:
-                        
                         asn1obj.value = String(data: contentData, encoding: .ascii)
-                        
-                        
                     case .utcTime:
                         asn1obj.value = dateFormatter(contentData: &contentData,
                                                       formats: ["yyMMddHHmmssZ", "yyMMddHHmmZ"])
-                        
-                        
                     case .generalizedTime:
                         asn1obj.value = dateFormatter(contentData: &contentData,
                                                       formats: ["yyyyMMddHHmmssZ"])
-                        
-                        
                     case .bitString:
                         if contentData.count > 0 {
                             _ = contentData.remove(at: 0) // unused bits
                         }
                         asn1obj.value = contentData
-                        
-                        
                     case .octetString:
                         do {
                             var subIterator = contentData.makeIterator()
@@ -134,8 +96,6 @@ public class ASN1DERDecoder: SCertificate {
                                 asn1obj.value = contentData
                             }
                         }
-                        
-                        
                     default:
                         print("unsupported tag: \(asn1obj.identifier!.tagNumber())")
                         asn1obj.value = contentData
@@ -144,7 +104,6 @@ public class ASN1DERDecoder: SCertificate {
                 }
                 else {
                     // custom/private tag
-                    
                     let contentData = try loadSubContent(iterator: &iterator)
                     
                     if let str = String(data: contentData, encoding: .utf8) {
@@ -186,7 +145,6 @@ public class ASN1DERDecoder: SCertificate {
     
     
     private static func loadSubContent(iterator: inout Data.Iterator) throws -> Data  {
-        
         let len = getContentLength(iterator: &iterator)
         
         guard len < Int.max else {
