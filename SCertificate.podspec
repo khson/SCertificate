@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SCertificate'
-  s.version          = '1.0.2'
+  s.version          = '1.0.3'
   s.summary          = 'A short description of SCertificate.'
   s.description      = 'Certificate Utility'
   s.homepage         = 'https://github.com/khson/SCertificate'
